@@ -25,3 +25,4 @@ let stone: Person = {
 // const是用在变量的，readonly是用在属性上的。
 
 
+
