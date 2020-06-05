@@ -14,6 +14,7 @@ console.log(Direction["up"]);
 // 3、当给枚举赋值后0就取不到值了
 
 console.log(Direction[0]);
+
 // 4、常量枚举，只有常量值可以带来常量枚举，计算值不可以
 
 
