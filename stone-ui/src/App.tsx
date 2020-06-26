@@ -7,6 +7,11 @@ const App: React.FC = () => {
     <div>
       <header className="App-header">
         <Button autoFocus btnType={ButtonType.Primary} size={ButtonSize.Small} disabled>Hello</Button>
+        <Button btnType={ButtonType.Primary} >Hello</Button>
+        <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>Hello</Button>
+        <Button btnType={ButtonType.Link}>Baidu Link</Button>
+        <Button btnType={ButtonType.Default}>Baidu Link</Button>
+        <Button btnType={ButtonType.Danger}>Baidu Link</Button>
       </header>
     </div>
   )
