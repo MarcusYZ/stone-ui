@@ -1,11 +1,24 @@
 import React from 'react';
 import Button, {ButtonType, ButtonSize} from './components/Button/button'
+import Menu from './components/Menu/menu'
+import MenuItem from './components/Menu/menuItem';
 import './App.css';
 
 const App: React.FC = () => {
   return (
     <div>
       <header className="App-header">
+        <Menu defaultIndex={0}>
+          <MenuItem>
+            cool link
+          </MenuItem>
+          <MenuItem>
+            cool link1
+          </MenuItem>
+          <MenuItem>
+            cool link2
+          </MenuItem>
+        </Menu>
         <Button autoFocus btnType={ButtonType.Primary} size={ButtonSize.Small} disabled>Hello</Button>
         <Button btnType={ButtonType.Primary} >Hello</Button>
         <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>Hello</Button>

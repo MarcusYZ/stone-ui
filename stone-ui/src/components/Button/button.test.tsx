@@ -2,8 +2,6 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import Button from './button'
 
-
-
 // 最外层在组件做分类
 describe('test Button componentys', ()=> {
   it('should render the corrent default button', () => {
