@@ -8,7 +8,7 @@ const App: React.FC = () => {
   return (
     <div>
       <header className="App-header">
-        <Menu defaultIndex={0} onSelect={(index)=> {alert(index)}}>
+        <Menu defaultIndex={0}>
           <MenuItem index={0}>
             cool link
           </MenuItem>

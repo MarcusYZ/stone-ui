@@ -4,8 +4,8 @@ import React, { useState, createContext } from 'react'
 import classNames from 'classnames';
 type SelectCallback = (selectedIndex: number) => void
 // props约束传入的参数
-type MenuMode = 'horizontal' | 'verical'
-export interface ManuProps {
+type MenuMode = 'horizontal' | 'vertical'
+export interface MenuProps {
   defaultIndex?: number,
   className?: string;
   mode?: MenuMode;
@@ -20,12 +20,12 @@ interface IMenuContext {
 
 export const MenuContext = createContext<IMenuContext>({index: 0})
 // 函数式组件
-const Menu: React.FC<ManuProps> = (props) => {
+const Menu: React.FC<MenuProps> = (props) => {
   const { className, mode, style, children, defaultIndex, onSelect} = props
   const [ currentActive, setActive ] = useState(defaultIndex)
   // 解构传入的值
   const classes = classNames('stone-menu', className, {
-    'menu-vertical': mode === 'verical'
+    'menu-vertical': mode === 'vertical'
   }) 
   // 对逻辑进行处理
   const handleClick = (index: number) => {
@@ -43,7 +43,7 @@ const Menu: React.FC<ManuProps> = (props) => {
   }
   // 模板代码
   return (
-    <ul className = {classes} style = {style}>
+    <ul className = {classes} style = {style} data-testid="test-menu">
       <MenuContext.Provider value={passedContext}>
         {/* 把context注入到provider */}
         {children}
