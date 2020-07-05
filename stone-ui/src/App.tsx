@@ -8,14 +8,14 @@ const App: React.FC = () => {
   return (
     <div>
       <header className="App-header">
-        <Menu defaultIndex={0}>
-          <MenuItem>
+        <Menu defaultIndex={0} onSelect={(index)=> {alert(index)}}>
+          <MenuItem index={0}>
             cool link
           </MenuItem>
-          <MenuItem>
+          <MenuItem index={1}>
             cool link1
           </MenuItem>
-          <MenuItem>
+          <MenuItem index={2}>
             cool link2
           </MenuItem>
         </Menu>
